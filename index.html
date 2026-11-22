@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Monzu Rul Haque - Digital Marketing Portfolio">
+<title>Monzu Rul Haque | Digital Marketing Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #082747;
+    --navy-light: #173c5c;
+    --gold: #d99a25;
+    --gold-light: #f6d58d;
+    --cream: #fbf7ef;
+    --white: #ffffff;
+    --text: #18314b;
+    --muted: #718096;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* HEADER */
+
+.site-header {
+    width: 100%;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #eee7dc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrap {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+}
+
+.brand-mark {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.brand small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.main-nav a {
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+.nav-contact {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 22px;
+    border-radius: 30px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 28px;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #fffdf9, #f7ecd6);
+    padding: 75px 0 85px;
+    border-bottom: 1px solid #eee3d3;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 9px 17px;
+    background: #fff0d2;
+    color: #a56c0b;
+    border: 1px solid #efd39b;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.hero-copy h1 {
+    font-size: clamp(38px, 5vw, 61px);
+    color: var(--navy);
+    line-height: 1.12;
+    margin-bottom: 13px;
+    letter-spacing: -2px;
+}
+
+.hero-copy h2 {
+    font-size: clamp(20px, 2.5vw, 27px);
+    margin-bottom: 22px;
+    color: var(--navy);
+}
+
+.hero-copy h2 em {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+}
+
+.hero-text {
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 14px;
+    max-width: 480px;
+    margin-bottom: 27px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #f7ca70, #d9951e);
+    color: var(--navy);
+    box-shadow: 0 8px 20px rgba(217,154,37,0.2);
+}
+
+.btn-outline {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 0.6px;
+}
+
+.hero-visual {
+    min-height: 390px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-halo {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    background: #f5e5c6;
+}
+
+.portrait-frame {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid white;
+    outline: 2px solid var(--gold);
+    z-index: 2;
+    background: #d9e4ec;
+}
+
+.portrait-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 50%;
+}
+
+.floating-card {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    z-index: 3;
+    padding: 17px 20px;
+    background: white;
+    border-radius: 13px;
+    box-shadow: 0 12px 35px rgba(8,39,71,0.12);
+    font-size: 12px;
+}
+
+.floating-card span {
+    color: var(--gold);
+    font-size: 19px;
+    margin-right: 6px;
+}
+
+.floating-card strong {
+    color: var(--navy);
+}
+
+.floating-card small {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+/* GENERAL SECTION */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-heading span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: clamp(30px, 4vw, 42px);
+    margin-top: 12px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-photo-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.about-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 7px solid white;
+    outline: 2px solid var(--gold);
+    box-shadow: 0 12px 35px rgba(8,39,71,0.10);
+    background: #d9e4ec;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+}
+
+.about-content h2 {
+    font-size: 35px;
+    line-height: 1.2;
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.about-content h2 em {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+}
+
+.about-content p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 13px;
+}
+
+.about-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* SERVICES */
+
+.services {
+    background: var(--cream);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card,
+.project-card,
+.skill-card {
+    background: white;
+    border: 1px solid #eee7dc;
+    border-radius: 16px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(8,39,71,0.08);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #fff0d2;
+    color: #b8780d;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.service-card h3,
+.project-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p,
+.project-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* SKILLS */
+
+.skills {
+    background: white;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 22px 12px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--navy);
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: var(--cream);
+}
+
+.project-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-visual {
+    min-height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #102f4c, #234e70);
+    color: white;
+    font-size: 35px;
+}
+
+.project-visual.gold {
+    background: linear-gradient(135deg, #b87919, #f0c875);
+    color: var(--navy);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-tag {
+    display: inline-block;
+    color: #a56c0b;
+    background: #fff0d2;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.score-number {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+.score small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.contact .section-heading h2 {
+    color: white;
+}
+
+.contact .section-heading p {
+    color: #c5d1dc;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.contact-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 17px 23px;
+    font-size: 13px;
+}
+
+.contact-item a:hover {
+    color: var(--gold-light);
+}
+
+/* FOOTER */
+
+.footer {
+    background: #061d34;
+    color: #c5d1dc;
+    padding: 27px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 17px;
+}
+
+.social-links a {
+    color: var(--gold-light);
+    font-weight: 700;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .main-nav {
+        gap: 13px;
+    }
+
+    .hero-grid {
+        gap: 20px;
+    }
+
+    .about-grid {
+        gap: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .nav-wrap {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+        margin-top: 15px;
+    }
+
+    .portrait-halo {
+        width: 270px;
+        height: 270px;
+    }
+
+    .portrait-frame {
+        width: 245px;
+        height: 245px;
+    }
+
+    .floating-card {
+        right: 0;
+        top: 5px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container nav-wrap">
+
+        <a href="#home" class="brand">
+            <span class="brand-mark">M</span>
+            <span>
+                <strong>MONZU</strong>
+                <small>DIGITAL MARKETER</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact" class="nav-contact">Let's Talk</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero-grid">
+
+        <div class="hero-copy">
+
+            <span class="eyebrow">✦ DIGITAL MARKETING SPECIALIST</span>
+
+            <h1>Monzu Rul Haque</h1>
+
+            <h2>Professional <em>Digital Marketer</em></h2>
+
+            <p class="hero-text">
+                I help businesses grow online through thoughtful research,
+                strategic marketing, and practical digital solutions.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-gold">Let's Talk ↗</a>
+                <a href="#portfolio" class="btn btn-outline">Explore My Work ↓</a>
+            </div>
+
+            <p class="hero-note">
+                ━ Research-led. Detail-focused. Client-minded.
+            </p>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="portrait-halo"></div>
+
+            <div class="portrait-frame">
+                <img src="image/monzu.jpg"
+                     alt="Monzu Rul Haque">
+            </div>
+
+            <div class="floating-card">
+                <span>✦</span>
+                <strong>Smart strategy.</strong>
+                <small>Meaningful digital work.</small>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section about" id="about">
+    <div class="container about-grid">
+
+        <div class="about-photo-wrap">
+            <div class="about-photo">
+                <img src="image/monzu.jpg"
+                     alt="Monzu Rul Haque profile photo">
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <span class="about-label">A LITTLE ABOUT ME</span>
+
+            <h2>
+                Focused on the details.<br>
+                <em>Driven by growth.</em>
+            </h2>
+
+            <p>
+                I'm Monzu Rul Haque, a digital marketer interested in helping
+                businesses make smarter decisions online.
+            </p>
+
+            <p>
+                My work includes B2B company research, influencer research,
+                and YouTube SEO audit.
+            </p>
+
+            <p>
+                I value clear communication, organized research, and
+                practical strategies that support real business goals.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="section services" id="services">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>WHAT I DO</span>
+            <h2>My Services</h2>
+            <p>Research-driven digital marketing support for businesses.</p>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="service-card">
+                <div class="card-icon">⌕</div>
+                <h3>B2B Lead Generation</h3>
+                <p>
+                    Business research, company research, prospect identification,
+                    and organized lead information.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">◎</div>
+                <h3>Influencer Research</h3>
+                <p>
+                    Influencer discovery, profile research, audience review,
+                    and organized influencer data.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="card-icon">▶</div>
+                <h3>YouTube SEO</h3>
+                <p>
+                    YouTube channel and video SEO audits, keyword research,
+                    and optimization recommendations.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="section skills" id="skills">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>MY EXPERTISE</span>
+            <h2>Skills & Capabilities</h2>
+            <p>Research, analysis, and practical digital marketing skills.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">B2B Lead Generation</div>
+            <div class="skill-card">Company Research</div>
+            <div class="skill-card">Influencer Research</div>
+            <div class="skill-card">YouTube SEO</div>
+            <div class="skill-card">Keyword Research</div>
+            <div class="skill-card">Competitor Research</div>
+            <div class="skill-card">SEO Audit</div>
+            <div class="skill-card">Market Research</div>
+            <div class="skill-card">Data Collection</div>
+            <div class="skill-card">Lead Research</div>
+            <div class="skill-card">Content Research</div>
+            <div class="skill-card">Digital Marketing Strategy</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>SELECTED WORK</span>
+            <h2>My Portfolio Projects</h2>
+            <p>A look at some of my research and digital marketing work.</p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="project-card">
+                <div class="project-visual">⌕</div>
+                <div class="project-content">
+                    <span class="project-tag">B2B RESEARCH</span>
+                    <h3>B2B Company Research</h3>
+                    <p>
+                        B2B company research and lead generation work,
+                        focused on identifying and organizing business prospects.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual gold">◎</div>
+                <div class="project-content">
+                    <span class="project-tag">INFLUENCER RESEARCH</span>
+                    <h3>Influencer Marketing Research</h3>
+                    <p>
+                        Influencer research and data organization to support
+                        influencer marketing planning and selection.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual">▶</div>
+                <div class="project-content">
+                    <span class="project-tag">YOUTUBE SEO AUDIT</span>
+                    <h3>YouTube SEO Audit</h3>
+                    <p>
+                        Audited YouTube SEO elements and improved the
+                        audit score through optimization work.
+                    </p>
+
+                    <div class="score">
+                        <span class="score-number">25 → 85</span>
+                        <small>SEO audit score improvement</small>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact" id="contact">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>GET IN TOUCH</span>
+            <h2>Let's Work Together</h2>
+            <p>
+                Have a project in mind? Feel free to contact me.
+            </p>
+        </div>
+
+        <div class="contact-details">
+
+            <div class="contact-item">
+                ✉
+                <a href="mailto:monzurulhaque2345@gmail.com">
+                    monzurulhaque2345@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                ☎
+                <a href="tel:01567966392">
+                    01567966392
+                </a>
+            </div>
+
+        </div>
+
+        <a href="mailto:monzurulhaque2345@gmail.com"
+           class="btn btn-gold">
+            Send Me an Email ↗
+        </a>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+        </div>
+
+        <p>
+            © <span id="year"></span> MONZU | Digital Marketing Portfolio.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function () {
+    mainNav.classList.toggle("active");
+});
+
+document.querySelectorAll(".main-nav a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        mainNav.classList.remove("active");
+    });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
